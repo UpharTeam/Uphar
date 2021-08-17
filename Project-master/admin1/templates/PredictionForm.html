@@ -1,0 +1,76 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<html>
+    <head> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+       
+       <!-- <style>
+            body{
+                background-color: teal;
+            }
+            .errorlist{
+                list-style-type: none;
+               
+            }
+           .box input[id=id_pd_tot], input[ id=id_pd_price],input[ id=id_date_data],input[id=id_pd_qty],select[id=id_medicine]{
+            border:0;
+    background: none;
+    display: block;
+    /* margin: 20px auto; */
+    text-align: center;
+    border: 2px solid #3498db;
+    padding: 10px 10px;
+    width: 200px;
+    outline: none;
+    background-color: whitesmoke;
+    border-radius: 24px;
+    transition: 0.25s;
+           } 
+           .box{
+            width: 300px;
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: transparent;
+    text-align: center;
+    background-color:rgb(86, 167, 187);
+    
+           }
+           .box label[for=id_pd_price],label[for=id_medicine],label[for=id_pd_qty],label[for=id_pd_tot],label[for=id_date_data]{
+               font-style: italic;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+           }
+           a{
+               color: cornsilk;
+           }
+        </style> -->
+    </head>
+    <center><body>
+        <form method="POST" >
+            {% csrf_token %}
+            <!-- <label for="">Select Medicine</label>
+            <select  name="medicine" id="id_medicine">
+                <option value="">--Select Medicine--</option>
+                {% for i in abc %}
+                <option value="">{{i.mname}}</option>
+                {% endfor %}
+            </select>
+            <br><label for="">pd_price</label>
+             <input type="number"  name="pd_price" placeholder="price" ><br>
+             <label for="">Quantity</label>
+            <input type="number"name="pd_qty" placeholder="quantity"><br>
+            <label for="">Pd_tot</label>
+            <input type="number" name="pd_tot"   id="id_pd_tot" placeholder="total"><br>
+            <label for="">Date</label>
+            <input type="date"  name="date_data" id="id_date_data" ><br> -->
+           {{form| crispy}} 
+
+             <input type="submit" class="btn btn-primary" value="Submit"><br><br><hr>
+             <center><I>Go To Home Page?</I><a href="{% url 'admin1:ind' %}">ClickHere</a></center>
+           
+
+        </form>
+    </body></center>
+</html>

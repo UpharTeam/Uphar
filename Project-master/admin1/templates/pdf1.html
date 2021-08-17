@@ -1,0 +1,34 @@
+
+<html>
+    <head>
+        {% load static %}
+    </head>
+<body>
+<table >
+<tr><td colspan=4><hr></td></tr>
+<tr ><h1> <th colspan=4><p><font size="6" color="blue">UPHAR HOSPITAL MANAGEMENT PROJECT</p></th><h1></tr>			
+<tr><td colspan=4><hr></td></tr>
+<tr>
+<td >Name</td><td> {{customer.pat_fname}}  {{customer.pat_mname}}  {{customer.pat_lname}}</td>
+<td >Email</td><td> {{customer.pat_email}}</td>
+</tr></br>
+<tr>
+<td >Date of Birth</td><td> {{customer.pat_dob}}</td>
+<td >Address</td><td> {{customer.pat_address}}</td>
+</tr></br>
+<tr>
+<td>Gender</td><td> {{customer.pat_gender}}</td>
+<td>City</td><td> {{customer.pat_city}}</td>
+</tr></br>
+<tr>
+<td>Pincode</td><td> {{customer.pat_pcode}}</td>
+<td>Phone number</td><td> {{customer.pat_mob}}</td>
+</tr></br>
+<tr><td colspan=4><hr></td></tr>
+<tr rowspan=10>
+<td colspan=4 align=center>  <img src="http://localhost:8000/static/assets/img/logolo.jpeg"  } width="1000" height="1000" alt="" align=center> </td>
+</tr>
+</table>
+
+</body>
+</html>

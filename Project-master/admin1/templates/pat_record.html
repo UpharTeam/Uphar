@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <table border="1">
+    <div> 
+        <tr>
+            <th>Id</th>
+            <th>First Name</th>
+            <th>Middle Name</th>
+            <th>Last Name</th>
+            <th>Email</th>
+            <th>DOB</th>
+            <th>Gender</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Pincode</th>
+            <th>Mobile</th>
+         </tr>
+         {% if pat %}
+         
+         {% for x in pat %}
+         
+         <tr>
+             <td>{{x.id}}</td>
+            <td>{{x.pat_fname}}</td>
+            <td>{{x.pat_mname}}</td>
+            <td>{{x.pat_lname}}</td>
+            <td>{{x.pat_email}}</td>
+            <td>{{x.pat_dob}}</td>
+            <td>{{x.pat_gender}}</td>
+            <td>{{x.pat_address}}</td>
+            <td>{{x.pat_city}}</td>
+            <td>{{x.pat_pcode}}</td>
+            <td>{{x.pat_mob}}</td>
+            
+        </tr>
+        {% endfor %}
+        {% endif %}
+        
+    </div>
+    </table>
+        
+    
+</body>
+</html>
